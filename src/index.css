@@ -1,5 +1,6 @@
 *,
 body {
+  
   margin: 0;
   padding: 0;
   font-family: 'Helvetica Neue', sans-serif;
@@ -8,21 +9,28 @@ body {
 }
 
 body{
-  background-image: url('./cool-background.png');
+
   background-size: 100%;
+
 }
+
 .feedHeader {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  font-size: 3rem;
   margin: auto;
   text-align: center;
+  margin-top: 10px;
 }
 
 .newPostHeader {
   text-align: center;
-  margin: 20px;
+  margin: 10px;
+  font-size: 1.5rem;
 }
 
 .newPost {
-  max-width: 500px;
+  max-width: 600px;
   border-radius: 3px;
   border-style: solid;
   margin: auto;
@@ -33,18 +41,24 @@ body{
 
 .textInputField {
   text-align: right;
+  margin : 10px;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.textInputField-english{
+  text-align: left;
+  margin : 10px;
+  font-size: 18px;
+  padding: 10px;
 }
 .post {
   border-radius: 3px;
   border-style: solid;
-  max-width: 300px;
+  max-width: 600px;
   margin: auto;
   text-align: right;
   padding: 25px;
   margin-top: 30px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
