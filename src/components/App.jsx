@@ -3,25 +3,39 @@ import { getPosts } from '../axios'
 import Post from './Post'
 import '../index.css'
 import FeedInputBox from './FeedInputBox';
+import Header from './Header';
+import Footer from './Footer';
+import LoadingCircle from './LoadingCircle'
 
 function App() {
   const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    getPosts().then(response => {
-
-      setPosts(response.data)
-    })
+    updatePosts(null)
   }, []);
+
+
+  const updatePosts = async () => {
+    setLoading(true)
+    getPosts().then(response => {
+      setPosts(response.data);
+      setLoading(false)
+    })
+  }
 
   return (
     <div className='App'>
-      <h1 className={'feedHeader'}>Feed</h1>
-      <FeedInputBox></FeedInputBox>
-      {posts.map(post => {
+      <Header></Header>
+      <h2 className={'feedHeader'}>Feed</h2>
+      <FeedInputBox setPosts={setPosts} updatePosts={updatePosts}></FeedInputBox>
+      <div id="posts"><div className={'centered'}>{loading && <LoadingCircle></LoadingCircle>}</div>
+        {posts.map((post, index) => {
 
-       return <Post content={post.content} />
-      })}
+          return <Post key={index} post={post} />
+        })}</div>
+
+      {/* <Footer></Footer> */}
     </div>
   )
 }

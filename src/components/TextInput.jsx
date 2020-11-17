@@ -1,7 +1,10 @@
 import React from 'react'
 
-export default function TextInput() {
+export default function TextInput(props) {
+
+    const input = props.input;
+    const handleChange= props.handleChange
     return (
-        <textarea className="textInputField-english" name="inputArea" rows="4" cols="50"></textarea>
+        <textarea onChange={handleChange} className="textInputField-english" value={input} name="inputArea" rows="4" cols="50"></textarea>
     )
 }

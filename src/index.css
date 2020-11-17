@@ -3,24 +3,45 @@ body {
   
   margin: 0;
   padding: 0;
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'Halvetica', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 body{
-
   background-size: 100%;
+}
+
+.post_input_section{
+  width: 90%;
+
+  margin: 10px auto;
+  text-align: left;
+}
+.post_solution{
+  width: 90%;
+  padding: 10px;
+  margin: 10px auto;
+  border: solid 1px ;
+  text-align: left;
+}
+ 
+/* Navbar */
+
+.navbar-brand.mb-0.h1{
+  font-family: 'Fondamento', cursive;
+
+  font-size: 2rem;
 
 }
 
 .feedHeader {
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'Fondamento', cursive;
+
   font-weight: bold;
-  font-size: 3rem;
-  margin: auto;
+  font-size: 2rem;
+  margin: 40px auto;
   text-align: center;
-  margin-top: 10px;
 }
 
 .newPostHeader {
@@ -31,7 +52,8 @@ body{
 
 .newPost {
   max-width: 600px;
-  border-radius: 3px;
+
+  border-radius: 25px;
   border-style: solid;
   margin: auto;
   text-align: center;
@@ -42,19 +64,21 @@ body{
 .textInputField {
   text-align: right;
   margin : 10px;
-  font-size: 18px;
+  font-size: 16px;
   padding: 10px;
 }
 
 .textInputField-english{
   text-align: left;
-  margin : 10px;
-  font-size: 18px;
+  width: 100%;
+  font-size: 16px;
   padding: 10px;
 }
 .post {
-  border-radius: 3px;
-  border-style: solid;
+  border-radius: 2px;
+  border-style: solid ;
+
+  border-radius: 25px;
   max-width: 600px;
   margin: auto;
   text-align: right;
@@ -62,3 +86,28 @@ body{
   margin-top: 30px;
 }
 
+
+/* Loading Circle */
+.centered{
+  width: fit-content;
+  margin: auto;
+  padding: 20px;
+}
+
+#posts{
+  margin: 20px 0;
+}
+
+/* Footer */
+
+
+
+footer{
+  font-family: 'Fondamento', cursive;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgb(158, 187, 241);
+}
