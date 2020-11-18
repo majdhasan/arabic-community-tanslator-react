@@ -1,4 +1,4 @@
-import react, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { getPosts } from '../axios'
 import Post from './Post'
 import '../index.css'
@@ -6,13 +6,14 @@ import FeedInputBox from './FeedInputBox';
 import Header from './Header';
 import Footer from './Footer';
 import LoadingCircle from './LoadingCircle'
+import PostCard from './PostCard'
 
 function App() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    updatePosts(null)
+    updatePosts()
   }, []);
 
 
@@ -28,12 +29,17 @@ function App() {
     <div className='App'>
       <Header></Header>
       <h2 className={'feedHeader'}>Feed</h2>
-      <FeedInputBox setPosts={setPosts} updatePosts={updatePosts}></FeedInputBox>
-      <div id="posts"><div className={'centered'}>{loading && <LoadingCircle></LoadingCircle>}</div>
+      <FeedInputBox setPosts={setPosts} updatePosts={setPosts} setLoading={setLoading}></FeedInputBox>
+      <hr />
+      <div id="posts">
+        <div className={'centered'}>{loading && <LoadingCircle></LoadingCircle>}
+        </div>
+
         {posts.map((post, index) => {
 
           return <Post key={index} post={post} />
-        })}</div>
+        })}
+      </div>
 
       {/* <Footer></Footer> */}
     </div>

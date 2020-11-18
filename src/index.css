@@ -1,6 +1,5 @@
 *,
 body {
-  
   margin: 0;
   padding: 0;
   font-family: 'Halvetica', serif;
@@ -8,31 +7,30 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-body{
+body {
   background-size: 100%;
 }
 
-.post_input_section{
+hr{
+  max-width: 700px;
+  margin: auto;
+}
+.post_input_section {
   width: 90%;
 
   margin: 10px auto;
   text-align: left;
 }
-.post_solution{
-  width: 90%;
-  padding: 10px;
-  margin: 10px auto;
-  border: solid 1px ;
+li {
   text-align: left;
 }
- 
+
 /* Navbar */
 
-.navbar-brand.mb-0.h1{
+.navbar-brand.mb-0.h1 {
   font-family: 'Fondamento', cursive;
 
   font-size: 2rem;
-
 }
 
 .feedHeader {
@@ -54,7 +52,7 @@ body{
   max-width: 600px;
 
   border-radius: 25px;
-  border-style: solid;
+  border-style: solid gray;
   margin: auto;
   text-align: center;
   padding: 25px;
@@ -63,21 +61,21 @@ body{
 
 .textInputField {
   text-align: right;
-  margin : 10px;
+  margin: 10px;
   font-size: 16px;
   padding: 10px;
 }
 
-.textInputField-english{
+.textInputField-english {
   text-align: left;
   width: 100%;
   font-size: 16px;
   padding: 10px;
 }
 .post {
-  border-radius: 2px;
-  border-style: solid ;
 
+  border-style: solid;
+  border-color: gray;
   border-radius: 25px;
   max-width: 600px;
   margin: auto;
@@ -86,23 +84,25 @@ body{
   margin-top: 30px;
 }
 
-
 /* Loading Circle */
-.centered{
+.centered {
   width: fit-content;
   margin: auto;
   padding: 20px;
 }
 
-#posts{
+#posts {
   margin: 20px 0;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-between;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Footer */
 
-
-
-footer{
+footer {
   font-family: 'Fondamento', cursive;
   width: 100%;
   text-align: center;

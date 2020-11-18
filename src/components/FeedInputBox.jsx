@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import '../index.css'
 import { Button } from '@material-ui/core';
-import { addPost } from '../axios'
+import { addPost, getPosts } from '../axios'
 
 export default function FeedInputBox(props) {
 
@@ -14,11 +14,18 @@ export default function FeedInputBox(props) {
 
     const handleClick = () => {
         addPost({ "content": input }).then(res => {
-            props.updatePosts().then(res => {
+            props.setLoading(true)
+            getPosts().then(response => {
+                props.setPosts(response.data);
+                props.setLoading(false)
                 setSubmitted(true)
             })
-
         })
+    }
+
+
+    const updatePosts = async () => {
+
     }
 
     if (submitted) {
